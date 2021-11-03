@@ -93,3 +93,8 @@ jobs:
       uses: peter-evans/commit-comment@v1
       with:
         body: ${{ steps.pytester-cov.outputs.output-table }}
+        
+    - name: Get Coverage report
+      uses: romeovs/lcov-reporter-action@v0.2.16
+      with:
+         lcov-file: ./coverage/lcov.info
