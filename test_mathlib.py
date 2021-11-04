@@ -12,4 +12,4 @@ def test_calc_substraction():
 
 def test_calc_multiply():
     output = mathlib.calc_multiply(2, 4)
-    assert output == 6
+    assert output == 8
