@@ -22,7 +22,7 @@
 #   * alexanderdamiani/pytester-cov@v1.2.0: runs `pytest --cov` and associated functions
 #   * nashmaniac/create-issue-action@v1.1: creates issue for repo
 #   * peter-evans/commit-comment@v1: adds message to commit
-# **************************************************************************************************************** #
+# *************************************************************************************************************** #
 
 name: pytester-cov workflow
 
