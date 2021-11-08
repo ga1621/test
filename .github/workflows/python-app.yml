@@ -48,7 +48,7 @@ jobs:
         pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Test using Pytest
-      run: pytest --cov=test-mathlib.py
+      run: pytest --cov-report term --cov=test-mathlib.py
       
     #- name: pytester-cov
      # id: pytester-cov
