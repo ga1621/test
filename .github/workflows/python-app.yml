@@ -101,14 +101,10 @@ jobs:
 #        body: ${{ steps.pytester-cov.outputs.output-table }}
 
     - name: Echo Report
-      shell:
-        script: |
-          
-            echo  '$(System.DefaultWorkingDirectory)'
-          
-            dir
-          
-            dir subfolders 
+      run: |
+        echo  '$(System.DefaultWorkingDirectory)'
+        dir
+        dir subfoldername
 
     - name: SonarCloud Scan
       uses: sonarsource/sonarcloud-github-action@master
