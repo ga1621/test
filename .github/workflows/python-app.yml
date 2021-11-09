@@ -105,6 +105,7 @@ jobs:
         echo  '$(System.DefaultWorkingDirectory)'
         dir
         dir junit
+        echo '$(GITHUB_WORKSPACE)'
 
     - name: SonarCloud Scan
       uses: sonarsource/sonarcloud-github-action@master
