@@ -124,5 +124,5 @@ jobs:
     - name: build the image
       run: |
           docker buildx build --push \
-          --tag ga1621/test_pytest1:1.0 \
+          --tag ga1621/test_pytest1:git \
           --platform linux/amd64,linux/arm/v7,linux/arm64 .
