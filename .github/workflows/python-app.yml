@@ -51,9 +51,10 @@ jobs:
       #run: pytest --doctest-modules --junitxml=junit/test-results.xml --cov-report=xml --cov-report=html
       run: | 
        pip install coverage
-       python -m pytest
-       coverage run -m pytest
-       coverage report
+       #python -m pytest
+       #coverage run -m pytest
+       #coverage report
+       pytest --cov=./ --cov-report=html
     #   echo  '$(System.DefaultWorkingDirectory)'
      #  dir
        # pytest --cov-report html:cov_html
