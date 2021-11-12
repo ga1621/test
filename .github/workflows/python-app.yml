@@ -53,6 +53,8 @@ jobs:
        echo  '$(System.DefaultWorkingDirectory)'
        dir
        pytest --html=report.html
+       cd /home/runner/work/test/test/
+       dir
       
     - name: pytester-cov
       id: pytester-cov
