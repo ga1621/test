@@ -49,9 +49,11 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Test using Pytest
       #run: pytest --doctest-modules --junitxml=junit/test-results.xml --cov-report=xml --cov-report=html
-      run: 
+      run: | 
        echo  '$(System.DefaultWorkingDirectory)'
+       dir
        pytest –-cov
+       pytest --html=report.html
       
     - name: pytester-cov
       id: pytester-cov
