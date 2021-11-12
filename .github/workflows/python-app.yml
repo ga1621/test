@@ -52,7 +52,7 @@ jobs:
       run: | 
        echo  '$(System.DefaultWorkingDirectory)'
        dir
-       pytest --html=report.html --self-contained-html
+       pytest
        cd /home/runner/work/test/test/
        dir
       
