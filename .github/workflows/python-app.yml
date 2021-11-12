@@ -52,7 +52,6 @@ jobs:
       run: | 
        echo  '$(System.DefaultWorkingDirectory)'
        dir
-       pytest –-cov
        pytest --html=report.html
       
     - name: pytester-cov
