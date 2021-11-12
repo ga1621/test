@@ -52,7 +52,7 @@ jobs:
       run: | 
        echo  '$(System.DefaultWorkingDirectory)'
        dir
-       pytest
+       pytest --cov-report html:cov_html
        cd /home/runner/work/test/test/
        dir
       
