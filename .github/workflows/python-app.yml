@@ -47,14 +47,23 @@ jobs:
         python -m pip install --upgrade pip
         pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Test using Pytest
+    - name: Test using Pytest and Generate report
       #run: pytest --doctest-modules --junitxml=junit/test-results.xml --cov-report=xml --cov-report=html
       run: | 
-       echo  '$(System.DefaultWorkingDirectory)'
-       dir
-       pytest --cov-report html:cov_html
-       cd /home/runner/work/test/test/
-       dir
+       pip install coverage
+       python -m pytest
+       coverage run -m pytest
+       coverage report
+    #   echo  '$(System.DefaultWorkingDirectory)'
+     #  dir
+       # pytest --cov-report html:cov_html
+      # cd /home/runner/work/test/test/
+       #dir
+    - name: Upload Coverage to Codecov
+      uses: codecov/codecov-action@v1
+      with:
+         fail_ci_if_error: true
+         token: ${{ secrets.CODECOV_TOKEN }}
       
     - name: pytester-cov
       id: pytester-cov
