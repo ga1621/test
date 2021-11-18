@@ -54,7 +54,7 @@ jobs:
        #python -m pytest
        #coverage run -m pytest
        #coverage report
-       pytest --cov=./ --cov-report=html
+       pytest --cov=./ --cov-report=xml
     #   echo  '$(System.DefaultWorkingDirectory)'
      #  dir
        # pytest --cov-report html:cov_html
